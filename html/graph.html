@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Graph Visualizer - Un outil de visualisation d'algorithmes sur des graphes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <title>Graph Visualizer - Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="travaux-pratiques.html">TRAVAUX PRATIQUES</a></li>
+                <li><a href="https://www.linkedin.com/in/celin-bouillon/" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://github.com/Hihthei" target="_blank">GITHUB</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <div class="project-logo-container">
+                <img src="../assets/img/graph_logo.png" alt="Graph Visualizer Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>Graph Visualizer</h1>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PySide6</span>
+                    <span class="tag">Algorithmes</span>
+                    <span class="tag">Visualisation</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="project-overview">
+                <h2>Aperçu du Projet</h2>
+                <p>Graph Visualizer est une application desktop permettant de visualiser et comprendre les principaux algorithmes de théorie des graphes. L'utilisateur peut créer des graphes personnalisés, exécuter différents algorithmes sur ces graphes et observer leur fonctionnement étape par étape.</p>
+                <p>Ce projet a été développé dans le cadre d'un cours d'algorithmes et structures de données, avec pour objectif de rendre les concepts théoriques plus accessibles grâce à une représentation visuelle interactive.</p>
+            </div>
+
+            <div class="project-features">
+                <h2>Fonctionnalités Principales</h2>
+                <ul>
+                    <li>Création et édition de graphes orientés ou non-orientés</li>
+                    <li>Visualisation d'algorithmes de parcours (DFS, BFS)</li>
+                    <li>Algorithmes de plus court chemin (Dijkstra, Bellman-Ford)</li>
+                    <li>Détection de cycles et composantes connexes</li>
+                    <li>Exportation de graphes et résultats en différents formats</li>
+                    <li>Mode pas-à-pas pour comprendre chaque étape des algorithmes</li>
+                </ul>
+            </div>
+
+            <div class="project-technical">
+                <h2>Aspects Techniques</h2>
+                <div class="tech-stack">
+                    <h3>Technologies Utilisées</h3>
+                    <div class="tech-icons">
+                        <span class="tech-icon">Python</span>
+                        <span class="tech-icon">PySide6</span>
+                        <span class="tech-icon">NetworkX</span>
+                        <span class="tech-icon">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="technical-details">
+                    <h3>Détails d'Implémentation</h3>
+                    <p>L'application est basée sur une architecture MVC (Modèle-Vue-Contrôleur) pour une séparation claire des responsabilités. Le modèle utilise NetworkX pour la représentation interne des graphes, tandis que la visualisation est gérée par une combinaison de PySide6 et Matplotlib pour un rendu dynamique.</p>
+                    <p>Les algorithmes sont implémentés de manière modulaire, permettant d'ajouter facilement de nouveaux algorithmes sans modifier le cœur de l'application. Chaque étape des algorithmes est représentée par un état qui peut être visualisé, ce qui permet le mode pas-à-pas.</p>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/img/graph/interface.png" alt="Interface principale de Graph Visualizer">
+                    <img src="../assets/img/graph/dijkstra.png" alt="Visualisation de l'algorithme de Dijkstra">
+                    <img src="../assets/img/graph/editing.png" alt="Mode d'édition de graphe">
+                </div>
+            </div>
+
+            <div class="project-challenges">
+                <h2>Défis et Solutions</h2>
+                <div class="challenge">
+                    <h3>Performance avec des graphes complexes</h3>
+                    <p>L'un des défis majeurs était de maintenir des performances fluides lors de la visualisation d'algorithmes sur des graphes de grande taille. Pour résoudre ce problème, j'ai implémenté un système de mise en cache des calculs intermédiaires et optimisé le rendu en ne redessainant que les éléments modifiés entre deux étapes.</p>
+                </div>
+                <div class="challenge">
+                    <h3>Interface utilisateur intuitive</h3>
+                    <p>Créer une interface à la fois puissante et simple d'utilisation était crucial. J'ai opté pour une approche minimaliste avec des fonctionnalités contextuelles qui n'apparaissent que lorsqu'elles sont pertinentes, réduisant ainsi la surcharge cognitive tout en maintenant toutes les fonctionnalités nécessaires.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/Hihthei/graph-visualizer" class="project-btn github" target="_blank">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="https://hihthei.github.io/graph-visualizer-demo" class="project-btn demo" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Voir la Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfolio</p>
+    </footer>
+    
+    <script src="../assets/js/lazyload.js"></script>
+    <script src="../assets/js/scroll-animations.js"></script>
+</body>
+</html>

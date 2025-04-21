@@ -1,0 +1,158 @@
+/* Page Contact - Version optimisée */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* En-tête de contact */
+.contact-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--header-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    color: var(--background-color);
+}
+
+.contact-header h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Structure de contenu */
+.contact-content {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+/* Zone d'informations de contact */
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-item {
+    background-color: var(--card-hover);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--header-color);
+    text-align: center;
+    transition: var(--transition-standard);
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--header-color);
+    margin-bottom: var(--spacing-sm);
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.info-item:hover i {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--accent-light);
+}
+
+.info-item h3 {
+    color: var(--header-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Formulaire de contact */
+.contact-form {
+    flex: 2;
+    background-color: var(--card-hover);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--header-color);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--header-color);
+}
+
+/* Champs de formulaire */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--header-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* Bouton d'envoi */
+.submit-btn {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--header-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    transition: var(--transition-standard);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .info-item {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .info-item {
+        width: 100%;
+    }
+}

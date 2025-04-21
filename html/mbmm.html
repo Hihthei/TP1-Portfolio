@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mood Based Musics Movies - Application de recommandation basée sur les émotions">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <title>Mood Based Musics Movies - Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="travaux-pratiques.html">TRAVAUX PRATIQUES</a></li>
+                <li><a href="https://www.linkedin.com/in/celin-bouillon/" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://github.com/Hihthei" target="_blank">GITHUB</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <div class="project-logo-container">
+                <img src="../assets/img/mbmm_logo.png" alt="MBMM Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>Mood Based Musics Movies</h1>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">CTkinter</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">API</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="project-overview">
+                <h2>Aperçu du Projet</h2>
+                <p>Mood Based Musics Movies (MBMM) est une application de recommandation qui suggère des films et des musiques en fonction de l'humeur de l'utilisateur. En combinant l'analyse des émotions et les préférences personnelles, MBMM crée des playlists et des listes de films parfaitement adaptées à l'état émotionnel du moment.</p>
+                <p>Contrairement aux systèmes de recommandation traditionnels qui se basent uniquement sur les goûts ou les historiques, MBMM intègre la dimension émotionnelle pour des suggestions plus pertinentes et contextuelles, enrichissant ainsi l'expérience utilisateur.</p>
+            </div>
+
+            <div class="project-features">
+                <h2>Fonctionnalités Principales</h2>
+                <ul>
+                    <li>Détection de l'humeur via questionnaire interactif ou analyse faciale</li>
+                    <li>Recommandations personnalisées de musiques via Spotify API</li>
+                    <li>Suggestions de films via TMDB API en fonction de l'humeur</li>
+                    <li>Création et gestion de playlists thématiques</li>
+                    <li>Profils personnalisés avec historique des humeurs</li>
+                    <li>Mode découverte pour explorer de nouveaux contenus</li>
+                </ul>
+            </div>
+
+            <div class="project-technical">
+                <h2>Aspects Techniques</h2>
+                <div class="tech-stack">
+                    <h3>Technologies Utilisées</h3>
+                    <div class="tech-icons">
+                        <span class="tech-icon">Python</span>
+                        <span class="tech-icon">CTkinter</span>
+                        <span class="tech-icon">SQLite</span>
+                        <span class="tech-icon">Spotipy</span>
+                        <span class="tech-icon">TMDB API</span>
+                        <span class="tech-icon">OpenCV</span>
+                    </div>
+                </div>
+                <div class="technical-details">
+                    <h3>Détails d'Implémentation</h3>
+                    <p>L'application est structurée autour d'une architecture modulaire avec des composants distincts pour la détection d'humeur, les recommandations et l'interface utilisateur. Le backend utilise SQLite pour stocker les données utilisateur et les préférences, tandis que les API externes (Spotify, TMDB) sont intégrées via des wrappers Python optimisés.</p>
+                    <p>Le module de détection d'humeur combine un système basé sur des questionnaires et une analyse d'expression faciale optionnelle (via OpenCV et un modèle de deep learning). Les algorithmes de recommandation utilisent un système hybride combinant filtrage collaboratif et analyse de contenu pour des suggestions précises.</p>
+                    <p>L'interface utilisateur développée avec CTkinter (CustomTkinter) offre une expérience moderne et réactive, avec des transitions fluides et un design adaptatif.</p>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/img/mbmm/dashboard.png" alt="Dashboard principal de l'application">
+                    <img src="../assets/img/mbmm/mood_detection.png" alt="Interface de détection d'humeur">
+                    <img src="../assets/img/mbmm/recommendations.png" alt="Exemple de recommandations personnalisées">
+                </div>
+            </div>
+
+            <div class="project-challenges">
+                <h2>Défis et Solutions</h2>
+                <div class="challenge">
+                    <h3>Cartographie des émotions aux contenus</h3>
+                    <p>Établir des correspondances précises entre les états émotionnels et les caractéristiques des films/musiques était un défi majeur. J'ai développé un modèle de classification multi-dimensionnel qui intègre plusieurs attributs (rythme, tonalité, genre, thèmes) et utilise des techniques d'apprentissage par renforcement pour s'améliorer avec les retours utilisateurs.</p>
+                </div>
+                <div class="challenge">
+                    <h3>Limitations des API et gestion du cache</h3>
+                    <p>Les limites de taux des API externes et les temps de réponse variables posaient des problèmes de performance. J'ai implémenté un système de mise en cache intelligent qui précharge les recommandations probables en fonction des habitudes de l'utilisateur et stocke localement les données fréquemment utilisées, réduisant les appels API de 75% et améliorant significativement la réactivité de l'application.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/Hihthei/mbmm" class="project-btn github" target="_blank">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="https://hihthei.github.io/mbmm-demo" class="project-btn demo" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Voir la Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfolio</p>
+    </footer>
+    
+    <script src="../assets/js/lazyload.js"></script>
+    <script src="../assets/js/scroll-animations.js"></script>
+</body>
+</html>

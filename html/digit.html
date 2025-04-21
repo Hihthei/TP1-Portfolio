@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digit Recognition - Application de reconnaissance de chiffres manuscrits avec apprentissage automatique">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <title>Digit Recognition - Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="travaux-pratiques.html">TRAVAUX PRATIQUES</a></li>
+                <li><a href="https://www.linkedin.com/in/celin-bouillon/" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://github.com/Hihthei" target="_blank">GITHUB</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-header">
+            <div class="project-logo-container">
+                <img src="../assets/img/digit_logo.png" alt="Digit Recognition Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>Digit Recognition</h1>
+                <div class="project-tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-content">
+            <div class="project-overview">
+                <h2>Aperçu du Projet</h2>
+                <p>Digit Recognition est une application interactive d'intelligence artificielle qui permet la reconnaissance de chiffres manuscrits en temps réel. L'utilisateur peut dessiner un chiffre sur une interface tactile ou à la souris, et le système prédit instantanément le chiffre dessiné avec un pourcentage de confiance.</p>
+                <p>Ce projet a été développé pour approfondir mes connaissances en apprentissage automatique et en traitement d'images, tout en créant une application intuitive et pédagogique pour illustrer les concepts de réseaux de neurones convolutifs.</p>
+            </div>
+
+            <div class="project-features">
+                <h2>Fonctionnalités Principales</h2>
+                <ul>
+                    <li>Interface de dessin interactive pour saisir des chiffres manuscrits</li>
+                    <li>Reconnaissance en temps réel avec indication du niveau de confiance</li>
+                    <li>Visualisation des caractéristiques détectées par le réseau neuronal</li>
+                    <li>Mode d'apprentissage permettant d'améliorer le modèle avec de nouveaux exemples</li>
+                    <li>Dashboard de performance montrant les matrices de confusion et métriques</li>
+                    <li>Exportation et importation de modèles entraînés</li>
+                </ul>
+            </div>
+
+            <div class="project-technical">
+                <h2>Aspects Techniques</h2>
+                <div class="tech-stack">
+                    <h3>Technologies Utilisées</h3>
+                    <div class="tech-icons">
+                        <span class="tech-icon">Python</span>
+                        <span class="tech-icon">TensorFlow</span>
+                        <span class="tech-icon">Keras</span>
+                        <span class="tech-icon">OpenCV</span>
+                        <span class="tech-icon">NumPy</span>
+                        <span class="tech-icon">Tkinter</span>
+                    </div>
+                </div>
+                <div class="technical-details">
+                    <h3>Détails d'Implémentation</h3>
+                    <p>Le cœur du système est un réseau neuronal convolutif (CNN) entraîné sur le dataset MNIST. L'architecture du réseau comprend plusieurs couches de convolution suivies de couches de pooling et finalement des couches denses pour la classification.</p>
+                    <p>Le prétraitement des images dessinées est une étape cruciale: redimensionnement, normalisation et application de filtres pour optimiser la reconnaissance. L'interface utilisateur a été développée avec Tkinter pour assurer une compatibilité sur différentes plateformes.</p>
+                    <p>La fonctionnalité d'apprentissage continu utilise des techniques de fine-tuning et d'augmentation de données pour améliorer les performances du modèle sans nécessiter un réentraînement complet.</p>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <img src="../assets/img/digit/interface.png" alt="Interface principale de l'application">
+                    <img src="../assets/img/digit/recognition.png" alt="Exemple de reconnaissance de chiffre">
+                    <img src="../assets/img/digit/heatmap.png" alt="Heatmap des caractéristiques détectées">
+                </div>
+            </div>
+
+            <div class="project-challenges">
+                <h2>Défis et Solutions</h2>
+                <div class="challenge">
+                    <h3>Variabilité des styles d'écriture</h3>
+                    <p>La grande variabilité dans la façon dont les utilisateurs dessinent les chiffres a posé un défi de généralisation. Pour résoudre ce problème, j'ai implémenté des techniques d'augmentation de données (rotations, translations, dilatations) et intégré un mécanisme permettant d'enrichir le modèle avec les exemples problématiques rencontrés.</p>
+                </div>
+                <div class="challenge">
+                    <h3>Performance sur appareils à faible puissance</h3>
+                    <p>Faire fonctionner un modèle de deep learning en temps réel sur des appareils aux ressources limitées était un défi important. J'ai optimisé le modèle par quantification et élagage, et implémenté une version allégée spécifiquement pour les appareils mobiles, réduisant la taille du modèle de 80% tout en maintenant une précision supérieure à 97%.</p>
+                </div>
+            </div>
+
+            <div class="project-links">
+                <a href="https://github.com/Hihthei/digit-recognition" class="project-btn github" target="_blank">
+                    <i class="fab fa-github"></i> Voir sur GitHub
+                </a>
+                <a href="https://hihthei.github.io/digit-recognition-demo" class="project-btn demo" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Voir la Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfolio</p>
+    </footer>
+    
+    <script src="../assets/js/lazyload.js"></script>
+    <script src="../assets/js/scroll-animations.js"></script>
+</body>
+</html>

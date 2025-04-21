@@ -1,0 +1,135 @@
+/* Styles spécifiques pour la page Travaux Pratiques - Version optimisée */
+
+.tp-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--header-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    color: var(--background-color);
+}
+
+.tp-header h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Grille de cartes TP */
+.tp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.tp-card {
+    background-color: var(--background-color);
+    border: 2px solid var(--header-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-standard);
+}
+
+.tp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* En-tête de carte TP */
+.tp-card-header {
+    background-color: var(--header-color);
+    padding: var(--spacing-md);
+    color: var(--background-color);
+}
+
+.tp-card-header h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Tags TP */
+.tp-tag {
+    background-color: var(--background-color);
+    color: var(--header-color);
+    font-weight: bold;
+}
+
+/* Contenu de carte TP */
+.tp-card-content {
+    padding: var(--spacing-lg);
+}
+
+.tp-description h3 {
+    color: var(--header-color);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.tp-description h3:first-child {
+    margin-top: 0;
+}
+
+/* Liste des technologies */
+.tp-tech-list {
+    list-style: none;
+    margin: var(--spacing-sm) 0;
+}
+
+.tp-tech-list li {
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.tp-tech-list i {
+    color: var(--header-color);
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Liens TP */
+.tp-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.tp-btn {
+    flex: 1;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .tp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .tp-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-links {
+        flex-direction: column;
+    }
+    
+    .tp-card-header h2 {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .tp-header h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .tp-card-content {
+        padding: var(--spacing-md);
+    }
+}
