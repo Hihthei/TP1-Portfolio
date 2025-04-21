@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travaux Pratiques de Célin Bouillon - Étudiant à l'ESIEA">
+    <meta name="description" content="Travaux pratiques de Célin Bouillon - Étudiant à l'ESIEA">
+    
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" as="style">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/tp.css">
-    <title>Travaux Pratiques - Portfolio</title>
+    
+    <title>Travaux Pratiques - Célin Bouillon</title>
 </head>
 <body>
     <header>
@@ -27,13 +37,12 @@
     </header>
 
     <main>
-        <section class="tp-header">
-            <h1>Mes Travaux Pratiques</h1>
-            <p>Voici l'ensemble des travaux pratiques réalisés dans le cadre de ma formation</p>
-        </section>
+        <div class="tp-header">
+            <h1>Travaux Pratiques</h1>
+            <p>Découvrez les différents projets réalisés dans le cadre de ma formation</p>
+        </div>
 
-        <section class="tp-grid">
-            <!-- TP-01 Portfolio HTML5/CSS3 -->
+        <div class="tp-grid">
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-01 : Portfolio HTML5/CSS3</h2>
@@ -44,30 +53,33 @@
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Création d'un portfolio en ligne présentant mes projets et compétences avec une mise en page responsive et un formulaire de contact fonctionnel.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
                             <li><i class="fab fa-html5"></i> HTML5 sémantique</li>
                             <li><i class="fab fa-css3-alt"></i> CSS3 avec variables</li>
-                            <li><i class="fas fa-mobile-alt"></i> Design responsive</li>
-                            <li><i class="fab fa-js"></i> JavaScript (validation de formulaire)</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP1-Portfolio" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP01-Portfolio" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp01-portfolio.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-02 Site Restaurant Bootstrap -->
+            
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-02 : Site Restaurant Bootstrap</h2>
@@ -78,98 +90,108 @@
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Conception d'un site web statique pour un restaurant comprenant une page d'accueil, une page menu et un formulaire de réservation, le tout utilisant Bootstrap pour un design responsive.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
                             <li><i class="fab fa-bootstrap"></i> Bootstrap 5</li>
                             <li><i class="fab fa-html5"></i> HTML5</li>
                             <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                            <li><i class="fab fa-js"></i> JavaScript (validation)</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP2-Restaurant" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP02-Restaurant" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp02-restaurant.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-03 Système de Réservation avec Calendrier -->
+            
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-03 : Système de Réservation avec Calendrier</h2>
                     <div class="tp-tags">
                         <span class="tp-tag">PHP</span>
-                        <span class="tp-tag">MySQL</span>
+                        <span class="tp-tag">SQL</span>
                         <span class="tp-tag">Bootstrap</span>
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Développement d'un système de réservation en ligne avec calendrier intégré, permettant aux utilisateurs de créer un compte, gérer leurs informations personnelles et réserver des créneaux horaires.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
                             <li><i class="fab fa-php"></i> PHP procédural</li>
-                            <li><i class="fas fa-database"></i> MySQL</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
                             <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-                            <li><i class="fas fa-shield-alt"></i> Sécurité (CSRF, XSS, SQL Injection)</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP3-Reservation" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP03-Reservation" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp03-reservation.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-04 Réseau Social -->
+            
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-04 : Réseau Social</h2>
                     <div class="tp-tags">
                         <span class="tp-tag">PHP</span>
-                        <span class="tp-tag">MySQL</span>
-                        <span class="tp-tag">AJAX</span>
+                        <span class="tp-tag">SQL</span>
+                        <span class="tp-tag">JavaScript/AJAX</span>
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Création d'une plateforme de réseau social avec fonctionnalités d'inscription, connexion, publication de posts, ajout de commentaires et système de messagerie entre utilisateurs.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
                             <li><i class="fab fa-php"></i> PHP</li>
-                            <li><i class="fas fa-database"></i> MySQL</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
                             <li><i class="fab fa-js"></i> JavaScript/AJAX</li>
-                            <li><i class="fab fa-css3-alt"></i> CSS personnalisé</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP4-SocialNetwork" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP04-SocialNetwork" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp04-socialnetwork.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-05 FastAPI -->
+            
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-05 : FastAPI</h2>
@@ -180,30 +202,32 @@
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Développement d'une API REST avec FastAPI, implémentant des endpoints CRUD, authentification et documentation automatique avec Swagger UI.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
-                            <li><i class="fab fa-python"></i> Python</li>
-                            <li><i class="fas fa-server"></i> FastAPI</li>
-                            <li><i class="fas fa-database"></i> SQLAlchemy</li>
-                            <li><i class="fas fa-lock"></i> JWT Authentication</li>
+                            <li><i class="fab fa-python"></i> Python/FastAPI</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP5-FastAPI" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP05-FastAPI" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp05-fastapi.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-06 Application de Gestion de Projet -->
+            
             <div class="tp-card">
                 <div class="tp-card-header">
                     <h2>TP-06 : Application de Gestion de Projet</h2>
@@ -214,70 +238,41 @@
                     </div>
                 </div>
                 <div class="tp-card-content">
-                    <div class="tp-description">
+                    <div class="tp-section tp-summary">
                         <h3>Résumé du projet</h3>
                         <p>Développement d'une application web complète pour la gestion de projets, avec tableau de bord, suivi des tâches, gestion des équipes et fonctionnalités de reporting.</p>
-                        
+                    </div>
+                    
+                    <div class="tp-section tp-technologies">
                         <h3>Technologies utilisées</h3>
                         <ul class="tp-tech-list">
                             <li><i class="fab fa-react"></i> React.js</li>
                             <li><i class="fab fa-node-js"></i> Node.js/Express</li>
                             <li><i class="fas fa-database"></i> MongoDB</li>
-                            <li><i class="fas fa-chart-line"></i> Chart.js</li>
                         </ul>
                     </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP6-ProjectManagement" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
+                    
+                    <div class="tp-section tp-actions">
+                        <div class="tp-links">
+                            <a href="https://github.com/Hihthei/TP06-ProjectManager" class="tp-btn github" target="_blank">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                            <a href="https://tp06-projectmanager.vercel.app" class="tp-btn demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir en ligne
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- TP-07 IA avec Java Spring -->
-            <div class="tp-card">
-                <div class="tp-card-header">
-                    <h2>TP-07 : IA avec Java Spring</h2>
-                    <div class="tp-tags">
-                        <span class="tp-tag">Java</span>
-                        <span class="tp-tag">Spring Boot</span>
-                        <span class="tp-tag">ML</span>
-                    </div>
-                </div>
-                <div class="tp-card-content">
-                    <div class="tp-description">
-                        <h3>Résumé du projet</h3>
-                        <p>Intégration d'algorithmes d'intelligence artificielle dans une application Spring Boot, avec interfaces REST pour l'entraînement et la prédiction de modèles ML.</p>
-                        
-                        <h3>Technologies utilisées</h3>
-                        <ul class="tp-tech-list">
-                            <li><i class="fab fa-java"></i> Java</li>
-                            <li><i class="fas fa-leaf"></i> Spring Boot</li>
-                            <li><i class="fas fa-brain"></i> Deeplearning4j</li>
-                            <li><i class="fas fa-database"></i> PostgreSQL</li>
-                        </ul>
-                    </div>
-                    <div class="tp-links">
-                        <a href="https://github.com/Hihthei/TP7-AIJavaSpring" class="tp-btn github" target="_blank">
-                            <i class="fab fa-github"></i> Voir sur GitHub
-                        </a>
-                        <a href="#" class="tp-btn demo" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Voir en ligne
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Portfolio</p>
+        <p>&copy; 2025 Portfolio - Célin Bouillon</p>
     </footer>
 
     <script src="../assets/js/lazyload.js"></script>
     <script src="../assets/js/scroll-animations.js"></script>
+    <script src="../assets/js/equalize-heights.js"></script>
 </body>
 </html>

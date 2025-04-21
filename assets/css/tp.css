@@ -1,4 +1,34 @@
-/* Styles spécifiques pour la page Travaux Pratiques - Version optimisée */
+:root {
+    --tp-summary-min-height: 150px;
+    --tp-technologies-min-height: 150px;
+    --tp-actions-min-height: 70px;
+    --tp-tags-height: 40px;
+    --tp-header-padding: 1.5rem;
+    
+    --background-color: #ffffff;
+    --header-color: #0B2986;
+    --text-color: #000000;
+    --accent-light: #9FC7ED;
+    --card-hover: rgba(159, 199, 237, 0.1);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 20px;
+    --transition-standard: all 0.3s ease;
+    --font-size-sm: 0.9rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.2rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 1.8rem;
+    --font-size-xxl: 2.5rem;
+    --shadow-sm: 0 3px 10px rgba(159, 199, 237, 0.2);
+    --shadow-md: 0 8px 16px rgba(159, 199, 237, 0.2);
+    --shadow-lg: 0 15px 30px rgba(159, 199, 237, 0.3);
+}
 
 .tp-header {
     text-align: center;
@@ -14,19 +44,21 @@
     margin-bottom: var(--spacing-sm);
 }
 
-/* Grille de cartes TP */
 .tp-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
 }
 
 .tp-card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
     border: 2px solid var(--header-color);
     border-radius: var(--border-radius-md);
     overflow: hidden;
     transition: var(--transition-standard);
+    will-change: transform;
 }
 
 .tp-card:hover {
@@ -34,45 +66,88 @@
     box-shadow: var(--shadow-md);
 }
 
-/* En-tête de carte TP */
 .tp-card-header {
     background-color: var(--header-color);
-    padding: var(--spacing-md);
+    padding: var(--tp-header-padding);
     color: var(--background-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .tp-card-header h2 {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-xs);
+    height: 2.2em;
+    display: flex;
+    align-items: center;
+    transition: height 0.3s ease;
 }
 
-/* Tags TP */
+.tp-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+    height: var(--tp-tags-height);
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
 .tp-tag {
     background-color: var(--background-color);
     color: var(--header-color);
     font-weight: bold;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
-/* Contenu de carte TP */
 .tp-card-content {
-    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.tp-description h3 {
+.tp-section {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid rgba(11, 41, 134, 0.1);
+    overflow: visible;
+    transition: height 0.3s ease;
+}
+
+.tp-section:last-child {
+    border-bottom: none;
+}
+
+.tp-summary {
+    min-height: var(--tp-summary-min-height);
+    display: flex;
+    flex-direction: column;
+}
+
+.tp-summary h3 {
     color: var(--header-color);
-    font-size: var(--font-size-md);
     margin-bottom: var(--spacing-sm);
-    margin-top: var(--spacing-md);
 }
 
-.tp-description h3:first-child {
-    margin-top: 0;
+.tp-summary p {
+    line-height: 1.5;
+    flex-grow: 1;
 }
 
-/* Liste des technologies */
+.tp-technologies {
+    min-height: var(--tp-technologies-min-height);
+}
+
+.tp-technologies h3 {
+    color: var(--header-color);
+    margin-bottom: var(--spacing-sm);
+}
+
 .tp-tech-list {
     list-style: none;
     margin: var(--spacing-sm) 0;
+    padding: 0;
 }
 
 .tp-tech-list li {
@@ -87,49 +162,135 @@
     font-size: 1.2rem;
     width: 20px;
     text-align: center;
+    flex-shrink: 0;
 }
 
-/* Liens TP */
+.tp-actions {
+    min-height: var(--tp-actions-min-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+}
+
 .tp-links {
     display: flex;
     gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
+    width: 100%;
 }
 
 .tp-btn {
     flex: 1;
     justify-content: center;
+    text-align: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-weight: bold;
+    transition: var(--transition-standard);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+    text-decoration: none;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
+.tp-btn.github {
+    background-color: var(--header-color);
+    color: var(--background-color);
+    border: none;
+}
+
+.tp-btn.demo {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid var(--header-color);
+}
+
+.tp-btn:hover {
+    transform: translateY(-3px);
+}
+
+.tp-btn i {
+    font-size: 1rem;
+}
+
+.no-js .tp-summary,
+.no-js .tp-technologies,
+.no-js .tp-actions {
+    min-height: auto;
+    height: auto;
+}
+
+.no-js .tp-card-header h2,
+.no-js .tp-tags {
+    height: auto;
+}
+
+@media (min-width: 1920px) {
+    .tp-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
     .tp-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1200px) {
-    .tp-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .tp-links {
-        flex-direction: column;
+    :root {
+        --tp-summary-min-height: 180px;
+        --tp-technologies-min-height: 180px;
+        --tp-tags-height: 50px;
+    }
+    
+    .tp-grid {
+        grid-template-columns: 1fr;
     }
     
     .tp-card-header h2 {
         font-size: var(--font-size-md);
     }
+    
+    .tp-btn {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    :root {
+        --tp-summary-min-height: 220px;
+        --tp-technologies-min-height: 220px;
+        --tp-actions-min-height: 110px;
+        --tp-tags-height: 60px;
+    }
+    
     .tp-header h1 {
         font-size: var(--font-size-xl);
     }
     
-    .tp-card-content {
-        padding: var(--spacing-md);
+    .tp-links {
+        flex-direction: column;
     }
+    
+    .tp-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+@keyframes fadeInCard {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.tp-card {
+    animation: fadeInCard 0.5s ease forwards;
 }
